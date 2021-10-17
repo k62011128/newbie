@@ -1,0 +1,2 @@
+//连接数据库db
+mongod -dbpath F:\mongodb\data\db
