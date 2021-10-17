@@ -40,9 +40,9 @@ cd 仓库名
 git init
 git remote add origin https://github.com/id/仓库名.git     //自己仓库地址
 //不是第一次直接用下面的指令
+git pull origin main//必须要先同步远程分支,不同步有可能传不上去,超时了是网络问题，多试试或者解除ssl验证
 git add *
 git commit -m "更新说明"
-git pull origin main//必须要先同步远程分支，不同步有可能传不上去
 git push origin main//如果还是传不上去报同步错误可以用git push -f origin main强制覆盖远程代码，缺点是以后工作里不小心用了就等同于删库跑路
 //如果上传失败报错了，自己百度，每个人的问题不一定一样
 
