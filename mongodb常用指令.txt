@@ -1,2 +1,5 @@
-//连接数据库db,记住一定要在安装好mongodb后的bin文件夹用cmd启动
+//装好mongodb后连接数据库db
+//这个db是自己创建的文件夹，放哪都可以，我建立的db在F:\mongodb\data\db
+//然后在安装好mongodb后的bin文件夹用cmd启动以下指令创建数据库
 mongod -dbpath F:\mongodb\data\db
+//之后端口默认在27017，直接用就行，不用再用以上指令
