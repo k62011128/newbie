@@ -46,9 +46,10 @@ git commit -m "更新说明"
 git push origin main//如果还是传不上去报同步错误可以用git push -f origin main强制覆盖远程代码，缺点是以后工作里不小心用了就等同于删库跑路
 //如果上传失败报错了，自己百度，每个人的问题不一定一样
 
-//解除ssl验证,我的上传报错是用下面指令解决问题的
+//我的上传报错是用下面指令解决问题的
+//报ssl错误就解除ssl验证
 git config --global http.sslVerify "false"
-//然后先解除代理，再把代理端口改1080，v2ray好像是10809
+//报超时错误就先解除代理，再把代理端口改1080，v2ray好像是10809
 git config --global --unset http.proxy
 git config --global http.proxy http://127.0.0.1:1080
 
