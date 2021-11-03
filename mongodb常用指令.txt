@@ -1,2 +1,2 @@
-//连接数据库db
+//连接数据库db,记住一定要在安装好mongodb后的bin文件夹用cmd启动
 mongod -dbpath F:\mongodb\data\db

@@ -48,5 +48,14 @@ git push origin main//如果还是传不上去报同步错误可以用git push -
 
 //解除ssl验证,我的上传报错是用下面指令解决问题的
 git config --global http.sslVerify "false"
-git config --global http.proxy
+//然后先解除代理，再把代理端口改1080，v2ray好像是10809
 git config --global --unset http.proxy
+git config --global http.proxy http://127.0.0.1:1080
+
+//将模块从devDependencies移至dependencies
+npm uninstall <module_name> --save-dev 
+npm install <module_name> --save
+//或者用下面一条指令就够了
+npm install <module_name> --save-prod
+//将模块从dependencies移至devDependencies
+npm install <module_name> --save-dev
