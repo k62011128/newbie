@@ -43,7 +43,7 @@ git remote add origin https://github.com/id/仓库名.git     //自己仓库地�
 git pull origin main//必须要先同步远程分支,不同步有可能传不上去,超时了是网络问题，多试试或者解除ssl验证
 git add *
 git commit -m "更新说明"
-git push origin main//如果还是传不上去报同步错误可以用git push -f origin main强制覆盖远程代码，缺点是以后工作里不小心用了就等同于删库跑路
+git push origin main(本地分支名称)//如果还是传不上去报同步错误可以用git push -f origin main强制覆盖远程代码，缺点是以后工作里不小心用了就等同于删库跑路
 //如果上传失败报错了，自己百度，每个人的问题不一定一样
 
 //我的上传报错是用下面指令解决问题的
@@ -54,7 +54,7 @@ git config --global --unset http.proxy
 git config --global http.proxy http://127.0.0.1:1080
 
 //将模块从devDependencies移至dependencies
-npm uninstall <module_name> --save-dev 
+npm uninstall <module_name> --save -dev 
 npm install <module_name> --save
 //或者用下面一条指令就够了
 npm install <module_name> --save-prod
